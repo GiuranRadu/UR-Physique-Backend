@@ -12,6 +12,9 @@
 11. npm i bcryptjs
 12. npm i jsonwebtoken
 13. npm i nodemailer
+14. npm i cloudinary
+15. npm i multer-cloudinary
+16. npm install --force multer-storage-cloudinary
 14. in package.json -> add inside "scripts" >>"start": "nodemon server.js" 
 
 

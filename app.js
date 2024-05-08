@@ -28,5 +28,12 @@ app.use("/user", usersRoutes)
 app.use("/gallery", galleryRoutes)
 app.use('/upload', uploadRoutes)
 
+//* TEST ROUTE *
+app.get('/', (req, res, next) => {
+  res.status(200).json({
+    status: 'Success',
+    message: 'Online'
+  })
+})
 
 module.exports = app
