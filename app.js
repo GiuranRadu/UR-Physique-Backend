@@ -28,13 +28,16 @@ app.use("/user", usersRoutes)
 app.use("/gallery", galleryRoutes)
 app.use('/upload', uploadRoutes)
 
+
 //* TEST ROUTE *
 app.get('/', (req, res, next) => {
+  const clientIP = req.ip;
+
   res.status(200).json({
     status: 'Success',
-    message: 'Online'
+    message: 'Online',
   })
-  console.log('App has been accessed! ✅');
+  console.log(`App has been accessed by ${clientIP}! ✅`);
 })
 
 module.exports = app
